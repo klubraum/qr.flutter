@@ -29,7 +29,7 @@ class QrValidator {
           errorCorrectLevel: errorCorrectionLevel,
         );
       }
-      qrCode.make();
+      QrImage(qrCode);
       return QrValidationResult(
           status: QrValidationStatus.valid, qrCode: qrCode);
     } on InputTooLongException catch (itle) {
